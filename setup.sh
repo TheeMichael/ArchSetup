@@ -1,3 +1,7 @@
+#!/usr/bin/env bash
+
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
 echo "You want these packages when installing gnome"
 echo "all packages"
 echo "pipewire-jack"
@@ -5,47 +9,39 @@ echo "wireplumber"
 echo "noto-fonts-emoji"
 echo "Enter 2 2 1"
 
-sudo pacman -S gnome gnome-tweaks gnome-terminal git firefox jq
+sudo pacman -Syu
+sudo pacman -S gnome gnome-tweaks gnome-terminal git firefox
 sudo systemctl enable gdm.service
 
-mkdir ~/Temp
-cd ~/Temp
+mkdir $SCRIPT_DIR/Temp
+
 
 # Get browser connector
-cd ~/Temp
+cd $SCRIPT_DIR/Temp
 git clone https://aur.archlinux.org/gnome-browser-connector.git
 cd gnome-browser-connector
 makepkg -si
 
 
 # Get humanity icon theme which is prereq for yaru theme
-cd ~/Temp
+cd $SCRIPT_DIR/Temp
 git clone https://aur.archlinux.org/humanity-icon-theme.git
 cd humanity-icon-theme
 makepkg -si
 
 
 # get yaru theme
-cd ~/Temp
+cd $SCRIPT_DIR/Temp
 git clone https://aur.archlinux.org/yaru.git
 cd yaru
 makepkg -si
 
 
 # get terminal transparency
-cd ~/Temp
+cd $SCRIPT_DIR/Temp
 git clone https://aur.archlinux.org/gnome-terminal-transparency.git
 cd gnome-terminal-transparency
 makepkg -si
-
-
-# Get dash to panel
-cd ~/.local/share/gnome-shell/extensions
-git clone https://github.com/home-sweet-gnome/dash-to-panel.git
-cd dash-to-panel
-$(jq '.uuid' metadata.json)
-
-
 
 
 cd ~/Temp
@@ -53,6 +49,13 @@ rm -rf ./gnome-browser-connector
 rm -rf ./humanity-icon-theme
 rm -rf ./yaru
 rm -rf ./gnome-terminal-transparency
+
+
+#Wallpapers
+cp $SCRIPT_DIR/Wallpapers/* ~/Pictures/Wallpapers
+
+#Dot files
+cp $SCRIPT_DIR/dotfiles/* ~/
 
 #Workspace switching hotkeys
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-1 "['<Shift><Alt>1']"
@@ -89,5 +92,32 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/or
 # Get min and max buttons for each window
 gsettings set org.gnome.desktop.wm.preferences button-layout "close,minimize,maximize:"
 gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
+
+# Center new windows
+gsettings set org.gnome.mutter center-new-windows true
+
+
+#Change theme to Yaru
+gsettings set org.gnome.desktop.interface cursor-theme 'Yaru'
+gsettings set org.gnome.desktop.interface gtk-theme 'Yaru'
+gsettings set org.gnome.desktop.interface icon-theme 'Yaru'
+gsettings set org.gnome.desktop.sound theme-name 'Yaru'
+gsettings set org.gnome.shell.extensions.user-theme name 'Yaru'
+
+
+# Change clock format
+org.gnome.desktop.interface clock-format '12h'
+org.gtk.Settings.FileChooser clock-format '12h'
+
+
+
+#Update terminal preferences
+cat $SCRIPT_DIR/conf/gterminal.preferences | dconf load /org/gnome/terminal/legacy/profiles:/
+
+#Enable user theme extension and removable drive menu
+gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
+gnome-extensions enable drive-menu@gnome-shell-extensions.gcampax.github.com
+
+
 
 sudo reboot

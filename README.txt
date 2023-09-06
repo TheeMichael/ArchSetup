@@ -108,16 +108,11 @@ END BASIC INSTALL
 
 ############################
 run script
-reboot into gnome
 ############################
 
 ############################
-In gnome Region and language, update language relog
+In gnome settings Region and language, update language relog
 IF YOU DONT DO THIS, MANY THINGS WILL ERROR OUT AND NOT WORK
-############################
-
-############################
-Copy over Dot files from dotfiles folder 
 ############################
 
 
@@ -128,12 +123,6 @@ https://extensions.gnome.org/extension/1160/dash-to-panel/
 Get vetical workspaces
 https://extensions.gnome.org/extension/5177/vertical-workspaces/
 
-
-############################
-Gnome extensions enable user themes
-Go to gnome-tweaks and change the all the appearance settings to Yaru
-Gnome-tweaks, ceter windows
-############################
 
 
 Terminal
