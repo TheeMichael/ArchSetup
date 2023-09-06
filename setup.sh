@@ -7,7 +7,7 @@ echo "all packages"
 echo "pipewire-jack"
 echo "wireplumber"
 echo "noto-fonts-emoji"
-echo "Enter 2 2 1"
+echo "Enter 2 2 1 1"
 
 sudo pacman -Syu
 sudo pacman -S gnome gnome-tweaks gnome-terminal git firefox
@@ -55,7 +55,7 @@ rm -rf ./gnome-terminal-transparency
 cp $SCRIPT_DIR/Wallpapers/* ~/Pictures/Wallpapers
 
 #Dot files
-cp $SCRIPT_DIR/dotfiles/* ~/
+cp -R $SCRIPT_DIR/dotfiles/. ~/
 
 #Workspace switching hotkeys
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-1 "['<Shift><Alt>1']"
@@ -106,13 +106,20 @@ gsettings set org.gnome.shell.extensions.user-theme name 'Yaru'
 
 
 # Change clock format
-org.gnome.desktop.interface clock-format '12h'
-org.gtk.Settings.FileChooser clock-format '12h'
+gsettings set org.gnome.desktop.interface clock-format '12h'
+gsettings set org.gtk.Settings.FileChooser clock-format '12h'
 
 
 
 #Update terminal preferences
-cat $SCRIPT_DIR/conf/gterminal.preferences | dconf load /org/gnome/terminal/legacy/profiles:/
+cat $SCRIPT_DIR/conf/gterminal.preferences | dconf load /org/gnome/terminal/
+
+
+
+#Update language locale for gnome mutter
+#sudo mkdir -p /var/lib/AccountServices/users
+#sudo cp $SCRIPT_DIR/conf/userlangconf /var/lib/AccountServices/users/$USER
+
 
 #Enable user theme extension and removable drive menu
 gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com

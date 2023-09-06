@@ -139,3 +139,6 @@ Settings->Date and Time
 
 
 Set Autoscroll on Firefox
+
+Possible titlebar fix
+https://askubuntu.com/questions/1435776/how-to-have-light-theme-with-dark-window-titlebar-on-ubuntu-22-04
