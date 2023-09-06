@@ -124,20 +124,6 @@ Get vetical workspaces
 https://extensions.gnome.org/extension/5177/vertical-workspaces/
 
 
-
-Terminal
-Check pictures in terminal folder
-Colors:
-Text: D3D7CF
-Background: 1E2E33
-set transparency levels
-
-
-Settings->Date and Time
-    set automatic date and time
-    Time format AM/PM
-
-
 Set Autoscroll on Firefox
 
 Possible titlebar fix
