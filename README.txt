@@ -56,6 +56,7 @@ Now configure grub to know what to actually boot
 
 Generare grub config files
     grub-mkconfig -o /boot/grub/grub.cfg
+    update-grub
 
 Now set password for a root user
     passwd
