@@ -10,13 +10,13 @@ echo "noto-fonts-emoji"
 echo "Enter 2 2 1 1"
 
 sudo pacman -Syu
-sudo pacman -S gnome gnome-tweaks gnome-terminal git firefox neofetch jq
+sudo pacman -S gnome gnome-tweaks gnome-terminal git firefox neofetch jq htop steam discord
 sudo systemctl enable gdm.service
 
 mkdir $SCRIPT_DIR/Temp
 
 
-# Get browser connector
+# Get browser connector to install extensions from browser
 cd $SCRIPT_DIR/Temp
 git clone https://aur.archlinux.org/gnome-browser-connector.git
 cd gnome-browser-connector
