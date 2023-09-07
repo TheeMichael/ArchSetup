@@ -65,6 +65,8 @@ cp -R $SCRIPT_DIR/dotfiles/. ~/
 #gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
 #gnome-extensions enable drive-menu@gnome-shell-extensions.gcampax.github.com
 
+bash extensions.sh
+
 
 # Disables speech auto spawn which causes audio glitches
 s1='# DisableAutoSpawn'
