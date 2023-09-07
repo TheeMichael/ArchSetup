@@ -161,5 +161,12 @@ Set Dark Theme
 Set Autoscroll on Firefox
 
 
+
+# Grub configuration
+    git clone https://github.com/ChrisTitusTech/Top-5-Bootloader-Themes
+    cd Top-5-Bootloader-Themes
+    sudo ./install.sh
+
+
 Possible titlebar fix
 https://askubuntu.com/questions/1435776/how-to-have-light-theme-with-dark-window-titlebar-on-ubuntu-22-04

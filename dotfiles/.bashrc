@@ -115,3 +115,8 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+
+# Update history immediately
+shopt -s histappend
+PROMPT_COMMAND='history -a;history -c;history -r'
