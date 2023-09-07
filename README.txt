@@ -93,11 +93,14 @@ unmount root and boot
     reboot
 
 Generate locale.conf
-    localectl set-locale LANG=en_US.UTF-8
+    Do this
+        localectl set-locale LANG=en_US.UTF-8
+    OR this
+        echo "LANG=en_US.UTF-8" > /etc/locale.conf
 
 Add user
     useradd -m virt
-    password virt
+    passwd virt
 
 Give user groups
     usermod -aG wheel,audio,video,optical,storage virt
@@ -111,9 +114,13 @@ Uncomment "# %wheel ALL=(ALL:ALL) ALL"
 
 END BASIC INSTALL
 
-
 ############################
-run script
+run script:
+Login in as user
+    cd ~
+    git clone https://www.github.com/TheeMichael/ArchSetup
+    cd ArchSetup
+    bash ./setup.sh
 ############################
 
 ############################
