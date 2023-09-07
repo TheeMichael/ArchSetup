@@ -121,6 +121,13 @@ Login in as user
     git clone https://www.github.com/TheeMichael/ArchSetup
     cd ArchSetup
     bash ./setup.sh
+
+In script use sequence:
+    Enter 
+    2 
+    2 
+    1 
+    1
 ############################
 
 ############################
