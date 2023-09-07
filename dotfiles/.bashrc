@@ -14,6 +14,9 @@ HISTCONTROL=ignoreboth
 
 # append to the history file, don't overwrite it
 shopt -s histappend
+# Update history immediately
+PROMPT_COMMAND='history -a;history -c;history -r'
+
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
@@ -117,6 +120,3 @@ if ! shopt -oq posix; then
 fi
 
 
-# Update history immediately
-shopt -s histappend
-PROMPT_COMMAND='history -a;history -c;history -r'
