@@ -54,9 +54,11 @@ Use systemd to start NetworkManager upon booting
 Now configure grub to know what to actually boot
     grub-install /dev/drive # should be something like /dev/sda without the partition, just the actual drive
 
+    #may need to do this if on VM
+    # grub-install /dev/drive --force
+
 Generare grub config files
     grub-mkconfig -o /boot/grub/grub.cfg
-    update-grub
 
 Now set password for a root user
     passwd
@@ -68,13 +70,6 @@ Select language locale
                 en_US ISO-8859-1
 Now generate it with
     locale-gen
-
-# Dont do these in following #
-#Generate file /etc/locale.conf
-#    nano /etc/locale.conf
-#
-#Write "LANG=en-US.UTF-8"
-#Save and quit
 
 
 Set the hostname
@@ -157,6 +152,3 @@ Set Autoscroll on Firefox
 
 Possible titlebar fix
 https://askubuntu.com/questions/1435776/how-to-have-light-theme-with-dark-window-titlebar-on-ubuntu-22-04
-
-Possible gnome extension installer
-https://unix.stackexchange.com/questions/617288/command-line-tool-to-install-gnome-shell-extensions
