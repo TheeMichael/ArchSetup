@@ -1,8 +1,7 @@
 #!/bin/bash
 
 array=( https://extensions.gnome.org/extension/1160/dash-to-panel/
-https://extensions.gnome.org/extension/5177/vertical-workspaces/
- )
+https://extensions.gnome.org/extension/5177/vertical-workspaces/ )
 
 for i in "${array[@]}"
 do
@@ -18,7 +17,7 @@ do
 done
 
 
-array=( https://extensions.gnome.org/extension/1160/dash-to-panel/ )
+array=( https://extensions.gnome.org/extension/615/appindicator-support/ )
 
 for i in "${array[@]}"
 do
