@@ -43,7 +43,7 @@ The -U will set the UUIDs as the identifier instead of sda1 sda2 etc. Much bette
     genfstab -U /mnt >> /mnt/etc/fstab
 
 Now change root into arch installation. Changes root directory to /mnt and then runs bash shell
-    arch chroot /mnt /bin/bash
+    arch-chroot /mnt /bin/bash
 
 Install a network manager and grub
     pacman -S networkmanager grub
