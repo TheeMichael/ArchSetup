@@ -151,22 +151,12 @@ Tray icon app indicators
 https://extensions.gnome.org/extension/615/appindicator-support/
 
 
-Setup Dash To Panel Settings. Refer to images in:
-"ArchSetup/Dash To Panel Settings"
-
-
-Set Dark Theme
-
 
 Set Autoscroll on Firefox
 
 
-
-# Grub configuration
-    git clone https://github.com/ChrisTitusTech/Top-5-Bootloader-Themes
-    cd Top-5-Bootloader-Themes
-    sudo ./install.sh
-
-
 Possible titlebar fix
 https://askubuntu.com/questions/1435776/how-to-have-light-theme-with-dark-window-titlebar-on-ubuntu-22-04
+
+Possible gnome extension installer
+https://unix.stackexchange.com/questions/617288/command-line-tool-to-install-gnome-shell-extensions

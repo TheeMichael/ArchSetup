@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+cd $SCRIPT_DIR
+
 
 echo "You want these packages when installing gnome"
 echo "all packages"
@@ -114,7 +116,7 @@ gsettings set org.gtk.Settings.FileChooser clock-format '12h'
 
 
 #Update terminal preferences
-cat $SCRIPT_DIR/conf/gterminal.preferences | dconf load /org/gnome/terminal/
+#cat $SCRIPT_DIR/conf/gterminal.preferences | dconf load /org/gnome/terminal/
 
 
 #Enable user theme extension and removable drive menu
@@ -134,6 +136,10 @@ cd ~/Documents/GrubThemes
 git clone https://github.com/ChrisTitusTech/Top-5-Bootloader-Themes
 cd Top-5-Bootloader-Themes/
 sudo ./install.sh
+
+
+# Load all dconf settings
+cat $SCRIPT_DIR/conf/all.preferences | dconf load /
 
 
 sudo reboot
