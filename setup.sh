@@ -10,7 +10,7 @@ echo "noto-fonts-emoji"
 echo "Enter 2 2 1 1"
 
 sudo pacman -Syu
-sudo pacman -S gnome gnome-tweaks gnome-terminal git firefox neofetch jq htop steam discord
+sudo pacman -S gnome gnome-tweaks gnome-terminal git firefox neofetch jq htop steam discord grub-customizer
 sudo systemctl enable gdm.service
 
 mkdir $SCRIPT_DIR/Temp
@@ -117,12 +117,6 @@ gsettings set org.gtk.Settings.FileChooser clock-format '12h'
 cat $SCRIPT_DIR/conf/gterminal.preferences | dconf load /org/gnome/terminal/
 
 
-
-#Update language locale for gnome mutter
-#sudo mkdir -p /var/lib/AccountServices/users
-#sudo cp $SCRIPT_DIR/conf/userlangconf /var/lib/AccountServices/users/$USER
-
-
 #Enable user theme extension and removable drive menu
 gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
 gnome-extensions enable drive-menu@gnome-shell-extensions.gcampax.github.com
@@ -132,5 +126,14 @@ gnome-extensions enable drive-menu@gnome-shell-extensions.gcampax.github.com
 s1='# DisableAutoSpawn'
 s2='DisableAutoSpawn'
 sudo sed -i "s|$s1|$s2|g" /etc/speech-dispatcher/speechd.conf
+
+
+# Install new grub theme
+mkdir ~/Documents/GrubThemes
+cd ~/Documents/GrubThemes
+git clone https://github.com/ChrisTitusTech/Top-5-Bootloader-Themes
+cd Top-5-Bootloader-Themes/
+sudo ./install.sh
+
 
 sudo reboot
