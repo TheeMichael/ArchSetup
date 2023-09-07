@@ -106,7 +106,7 @@ Give user groups
     usermod -aG wheel,audio,video,optical,storage virt
 
 Install sudo
-    pacman -S sudo
+    pacman -S sudo git
 
 Add user to sudoers
     EDITOR=nano visudo
