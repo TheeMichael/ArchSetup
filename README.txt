@@ -134,9 +134,11 @@ In script use sequence:
 ############################
 
 
-Next run extensions.sh
+Next run 
+    extensions.sh
 
 
+Set Background
 Set Autoscroll on Firefox
 
 
