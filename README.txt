@@ -29,6 +29,7 @@ Now need to set partition as ext4 for both partitions
     mkfs.ext4 /dev/drivepartition2
 
 Mount root folder to /mnt
+    mkdir /mnt/boot
     mount /dev/drivepartition2 /mnt
 
 Make a folder /mnt/boot to mount your boot partition to
