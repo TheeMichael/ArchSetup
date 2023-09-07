@@ -69,11 +69,12 @@ Select language locale
 Now generate it with
     locale-gen
 
-Generate file /etc/locale.conf
-    nano /etc/locale.conf
-
-Write "LANG=en-US.UTF-8"
-Save and quit
+# Dont do these in following #
+#Generate file /etc/locale.conf
+#    nano /etc/locale.conf
+#
+#Write "LANG=en-US.UTF-8"
+#Save and quit
 
 
 Set the hostname
@@ -90,6 +91,9 @@ exit chroot
 unmount root and boot
     umount -R /mnt
     reboot
+
+Generate locale.conf
+    localectl set-locale LANG=en_US.UTF-8
 
 Add user
     useradd -m virt
