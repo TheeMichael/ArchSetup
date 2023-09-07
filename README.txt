@@ -112,6 +112,14 @@ Add user to sudoers
     EDITOR=nano visudo
 Uncomment "# %wheel ALL=(ALL:ALL) ALL"
 
+
+Enable multilib in:
+/etc/pacman.conf
+
+    [multilib]
+    Include = /etc/pacman.d/mirrorlist
+
+
 END BASIC INSTALL
 
 ############################
@@ -130,11 +138,6 @@ In script use sequence:
     1
 ############################
 
-############################
-In gnome settings Region and language, update language relog
-IF YOU DONT DO THIS, MANY THINGS WILL ERROR OUT AND NOT WORK
-############################
-
 
 Get dash to panel extension 
 https://extensions.gnome.org/extension/1160/dash-to-panel/
@@ -144,7 +147,19 @@ Get vetical workspaces
 https://extensions.gnome.org/extension/5177/vertical-workspaces/
 
 
+Tray icon app indicators
+https://extensions.gnome.org/extension/615/appindicator-support/
+
+
+Setup Dash To Panel Settings. Refer to images in:
+"ArchSetup/Dash To Panel Settings"
+
+
+Set Dark Theme
+
+
 Set Autoscroll on Firefox
+
 
 Possible titlebar fix
 https://askubuntu.com/questions/1435776/how-to-have-light-theme-with-dark-window-titlebar-on-ubuntu-22-04
