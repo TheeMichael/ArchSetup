@@ -128,4 +128,9 @@ gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
 gnome-extensions enable drive-menu@gnome-shell-extensions.gcampax.github.com
 
 
+# Disables speech auto spawn which causes audio glitches
+s1='# DisableAutoSpawn'
+s2='DisableAutoSpawn'
+sudo sed -i "s|$s1|$s2|g" /etc/speech-dispatcher/speechd.conf
+
 sudo reboot
