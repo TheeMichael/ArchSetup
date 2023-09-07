@@ -134,17 +134,7 @@ In script use sequence:
 ############################
 
 
-Get dash to panel extension 
-https://extensions.gnome.org/extension/1160/dash-to-panel/
-
-
-Get vetical workspaces
-https://extensions.gnome.org/extension/5177/vertical-workspaces/
-
-
-Tray icon app indicators
-https://extensions.gnome.org/extension/615/appindicator-support/
-
+Next run extensions.sh
 
 
 Set Autoscroll on Firefox
