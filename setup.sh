@@ -12,7 +12,7 @@ echo "noto-fonts-emoji"
 echo "Enter 2 2 1 1"
 
 sudo pacman -Syu
-sudo pacman -S gnome gnome-tweaks gnome-terminal git firefox neofetch jq htop steam discord grub-customizer
+sudo pacman -S gnome gnome-tweaks gnome-terminal git firefox neofetch jq htop steam discord grub-customizer wget
 sudo systemctl enable gdm.service
 
 mkdir $SCRIPT_DIR/Temp
