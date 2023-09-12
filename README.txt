@@ -144,3 +144,11 @@ Set Autoscroll on Firefox
 
 Possible titlebar fix
 https://askubuntu.com/questions/1435776/how-to-have-light-theme-with-dark-window-titlebar-on-ubuntu-22-04
+
+
+Disable smooth scroll
+gsettings set org.gnome.desktop.peripherals.mouse natural-scroll false
+
+
+Workspaces on all monitors
+gsettings set org.gnome.mutter workspaces-only-on-primary false
