@@ -7,9 +7,9 @@ cd $SCRIPT_DIR
 echo "You want these packages when installing gnome"
 echo "all packages"
 echo "pipewire-jack"
-echo "wireplumber"
+echo "pipewire-media-session"
 echo "noto-fonts-emoji"
-echo "Enter 2 2 1 1"
+echo "Enter 2 2 2 1"
 
 sudo pacman -Syu
 sudo pacman -S gnome gnome-tweaks gnome-terminal git firefox neofetch jq htop grub-customizer wget

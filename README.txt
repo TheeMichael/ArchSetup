@@ -152,3 +152,14 @@ gsettings set org.gnome.desktop.peripherals.mouse natural-scroll false
 
 Workspaces on all monitors
 gsettings set org.gnome.mutter workspaces-only-on-primary false
+
+
+getting man pages
+    sudo pacman -S man-pages man-db
+    mandb
+    man pacman
+
+
+May need to install package for viewing ntfs filesystems
+It worked without it install, but I guess pacman removed it at some point
+    pacman -S ntfs-3g
